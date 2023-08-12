@@ -21,3 +21,6 @@ Embora as estruturas em C possam ser usadas para criar uma abordagem semelhante 
 
 Resumo: Tuplas nada mais são do que "listas" imutável e que contem elementos de diferentes tipos importantes quanto. Já a lista é uma tupla de apenas um tipo de dado e totalmente mutável.
 
+help:
+
+https://linguagemc.com.br/a-biblioteca-math-h/
