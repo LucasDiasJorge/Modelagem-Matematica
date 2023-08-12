@@ -7,7 +7,7 @@ int main() {
     double t = 0.5;        // Tempo
     double y = v0 * t - 0.5 * g * t * t;   // Posição vertical
 
-    printf("Posição vertical: %lf\n", y);
+    printf("Posição vertical: %lf m\n", y);
 
     return 0;
 }
