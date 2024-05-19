@@ -1,8 +1,14 @@
 # Probabilidade
 
+## Clássica
+
+![P(A)](image.png)
+
 Referência: [Probabilidade - Brasil Escola](https://brasilescola.uol.com.br/matematica/probabilidade.htm)
 
 ## Empírica (Anotações de Desempenho)
+
+Referência: [Estatística - Brasil Escola](https://brasilescola.uol.com.br/matematica/estatistica-2.htm#:~:text=A%20estat%C3%ADstica%20%C3%A9%20o%20campo,duas%20partes%3A%20descritiva%20e%20inferencial.)
 
 ### 1. Uso de Memória
 1.1. **Stack Allocation:** É mais rápida em comparação com a alocação dinâmica, mas em programas grandes, a alocação dinâmica se destaca devido ao espaço limitado da stack.
