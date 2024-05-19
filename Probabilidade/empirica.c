@@ -29,8 +29,8 @@ int main() {
         }
     }
 
-    printf("Quantidades de 1 = %d\n",one);
-    printf("Quantidades de 0 = %d\n",zero);
+    printf("Frequências de 1 = %d\n",one);
+    printf("Frequências de 0 = %d\n",zero);
 
     printf("Probabilidade empírica = %f\n", (float)one/50);
 
