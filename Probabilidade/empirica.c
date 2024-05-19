@@ -16,7 +16,7 @@ int main() {
     int one = 0;
     int zero = 0;
 
-    for(int i = 0; i < 51; i++){
+    for(int i = 0; i < 50; i++){
 
         *random = rand() % 2; // Generate a random number between 0 and 1
         printf("%d\n", *random);
