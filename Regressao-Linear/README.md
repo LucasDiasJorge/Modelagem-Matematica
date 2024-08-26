@@ -55,3 +55,7 @@ Análise da relação entre experiência profissional e desempenho no trabalho.<
 Previsão de salários com base em variáveis como educação e experiência.
 
 Esses são apenas alguns exemplos, e a regressão linear é uma ferramenta versátil que pode ser aplicada em uma ampla variedade de contextos para entender e modelar relacionamentos entre variáveis.
+
+#### Exemplos:
+
+https://www.youtube.com/watch?v=CtsRRUddV2s&ab_channel=VisuallyExplained
