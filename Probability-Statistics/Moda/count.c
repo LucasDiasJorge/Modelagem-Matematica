@@ -3,16 +3,28 @@
 
 #define MAX 1000000  // Definindo o tamanho máximo de valores distintos
 
+// Definindo uma struct para armazenar o número e suas ocorrências
+typedef struct {
+    int number;    // O número em si
+    int count;     // A quantidade de ocorrências do número
+} NumberCount;
+
 int main() {
     FILE *file;
     int num, max_num = 0;
-    int *freq;
+    NumberCount *freq;
 
-    // Alocando memória para o array de frequências
-    freq = (int *)calloc(MAX, sizeof(int));
+    // Alocando memória para o array de structs
+    freq = (NumberCount *)calloc(MAX, sizeof(NumberCount));
     if (freq == NULL) {
         printf("Erro ao alocar memória.\n");
         return 1;
+    }
+
+    // Inicializando a struct
+    for (int i = 0; i < MAX; i++) {
+        freq[i].number = i;
+        freq[i].count = 0;
     }
 
     // Abrindo o arquivo para leitura
@@ -25,17 +37,19 @@ int main() {
 
     // Lendo os números do arquivo e contando a frequência
     while (fscanf(file, "%d", &num) != EOF) {
-        freq[num]++;
-        if (num > max_num) {
-            max_num = num;  // Atualiza o maior número encontrado
+        if (num >= 0 && num < MAX) {  // Verifica se o número está no intervalo válido
+            freq[num].count++;
+            if (num > max_num) {
+                max_num = num;  // Atualiza o maior número encontrado
+            }
         }
     }
 
     // Exibindo o número de ocorrências de cada tipo
     printf("Número de ocorrências:\n");
     for (int i = 0; i <= max_num; i++) {
-        if (freq[i] > 0) {
-            printf("Número %d: %d vezes\n", i, freq[i]);
+        if (freq[i].count > 0) {
+            printf("Número %d: %d vezes\n", freq[i].number, freq[i].count);
         }
     }
 
