@@ -1,22 +1,22 @@
 #include <stdio.h>
 #include <math.h>
 
-// Function to calculate RSSI
-double calculateRSSI(double signalPower, double noisePower) {
-    // RSSI = Signal Power - Noise Power
-    return signalPower - noisePower;
+double rssi_to_distance(int rssi, int A, double n) {
+    return pow(10, (A - rssi) / (10 * n));
 }
 
 int main() {
-    // Example signal and noise power values
-    double signalPower = -50.0; // in dBm
-    double noisePower = -90.0;  // in dBm
+    int rssi;
+    int A = -40; // RSSI at 1 meter (example value)
+    double n = 2.0;
 
-    // Calculate RSSI
-    double rssi = calculateRSSI(signalPower, noisePower);
+    // Input RSSI value
+    printf("Enter RSSI value (in dBm): ");
+    scanf("%d", &rssi);
 
-    // Output the result
-    printf("RSSI: %.2f dBm\n", rssi);
+    // Calculate distance
+    double distance = rssi_to_distance(rssi, A, n);
+    printf("Estimated distance: %.2f meters\n", distance);
 
     return 0;
 }
